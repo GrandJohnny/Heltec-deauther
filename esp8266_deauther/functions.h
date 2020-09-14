@@ -247,15 +247,15 @@ bool s2b(String input) {
 }
 
 // ===== PRINT FUNCTIONS ===== //
-void prnt(const String s) {
+void prnt(String s) {
     Serial.print(s);
 }
 
-void prnt(const bool b) {
+void prnt(bool b) {
     Serial.print(b2s(b));
 }
 
-void prnt(const char c) {
+void prnt(char c) {
     Serial.print(c);
 }
 
@@ -263,31 +263,23 @@ void prnt(const char* ptr) {
     Serial.print(FPSTR(ptr));
 }
 
-void prnt(const char* ptr, int len) {
-    for (int i = 0; i<len; i++) prnt(ptr[i]);
-}
-
-void prnt(const int i) {
+void prnt(int i) {
     Serial.print((String)i);
-}
-
-void prnt(const uint32_t i) {
-    Serial.printf("%u", i);
 }
 
 void prntln() {
     Serial.println();
 }
 
-void prntln(const String s) {
+void prntln(String s) {
     Serial.println(s);
 }
 
-void prntln(const bool b) {
+void prntln(bool b) {
     Serial.println(b2s(b));
 }
 
-void prntln(const char c) {
+void prntln(char c) {
     Serial.println(c);
 }
 
@@ -295,17 +287,8 @@ void prntln(const char* ptr) {
     Serial.println(FPSTR(ptr));
 }
 
-void prntln(const char* ptr, int len) {
-    for (int i = 0; i<len; i++) prnt(ptr[i]);
-    prntln();
-}
-
-void prntln(const int i) {
+void prntln(int i) {
     Serial.println((String)i);
-}
-
-void prntln(const uint32_t i) {
-    Serial.printf("%u\r\n", i);
 }
 
 /* ===== WiFi ===== */
@@ -419,7 +402,7 @@ String searchVendor(uint8_t* mac) {
 }
 
 /* ===== STRING ===== */
-String bytesToStr(const uint8_t* b, uint32_t size) {
+String bytesToStr(uint8_t* b, uint32_t size) {
     String str;
 
     for (uint32_t i = 0; i < size; i++) {
@@ -431,7 +414,7 @@ String bytesToStr(const uint8_t* b, uint32_t size) {
     return str;
 }
 
-String macToStr(const uint8_t* mac) {
+String macToStr(uint8_t* mac) {
     return bytesToStr(mac, 6);
 }
 
@@ -448,29 +431,6 @@ bool strToMac(String macStr, uint8_t* mac) {
     }
 
     for (uint8_t i = 0; i < 6; i++) mac[i] = strtoul((macStr.substring(i * 2, i * 2 + 2)).c_str(), NULL, 16);
-
-    return true;
-}
-
-bool strToIP(String ipStr, uint8_t* ip) {
-    String parts[4]  = { "0", "0", "0", "0" };
-    int    ipAddr[4] = { -1, -1, -1, -1 };
-
-    int j = 0;
-
-    for (int i = 0; i<ipStr.length(); i++) {
-        if (ipStr[i] == '.') j++;
-        else parts[j] += ipStr[i];
-    }
-
-    for (int i = 0; i<4; i++) {
-        ipAddr[i] = parts[i].toInt();
-        if ((ipAddr[i] < 0) || (ipAddr[i] > 255)) return false;
-    }
-
-    for (int i = 0; i<4; i++) {
-        ip[i] = (uint8_t)ipAddr[i];
-    }
 
     return true;
 }
