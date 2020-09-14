@@ -14,7 +14,7 @@ Or become a patron on <a href="https://patreon.com/spacehuhn" target="_blank">pa
 Also available: <a href="https://www.tindie.com/products/Spacehuhn/spacehuhn-stickers/">Stickers</a></b>!
 </p>
 
-**This is just display-enabled esp8266-deauther v2.1 with adjusted code for wifi kit 8(0.91 OLED)**
+**This is just @SpacehuhnTech's display-enabled esp8266-deauther v2.1 with adjusted code for wifi kit 8(0.91 OLED)**
 
 ## Known issues:
 - Fake clock isnt visible in main menu ( it works if you click on last unvisible menunode )
