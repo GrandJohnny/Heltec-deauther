@@ -1,6 +1,6 @@
 # ESP8266 Deauther adjusted for heltec wifi kit 8 (0.91 OLED)
 
-<p align="center"><img alt="PICTURE logo" src="https://raw.githubusercontent.com/GrandJohnny/Heltec-deauther/v2/wifi-kit-8.png" width="200"></p>
+<p align="center"><img alt="PICTURE logo" src="https://raw.githubusercontent.com/GrandJohnny/Heltec-deauther/v2/wifi-kit-8.png" width="500"></p>
 
 <p align="center">
 🐦 <a href="https://twitter.com/spacehuhn">Twitter</a>
