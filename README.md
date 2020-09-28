@@ -13,8 +13,4 @@ Click <a href="https://github.com/spacehuhn/esp8266_deauther/wiki/Installation">
 
 **This is just @SpacehuhnTech's display-enabled esp8266-deauther v2.1 with adjusted code for wifi kit 8(0.91 OLED)**
 
-## Known issues:
-- Fake clock isnt visible in main menu ( it works if you click on last unvisible menunode )
-- Some other last options in menu arent visible yet ( but u can figure out what they are or even try clicking them so that wouldnt be a big deal when you are using such a small OLED )
-
 <b>Would be glad if u drop any ideas to make this look better on a 0.91 OLED</b>
