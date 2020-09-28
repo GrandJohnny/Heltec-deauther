@@ -699,14 +699,14 @@ void DisplayUI::drawButtonTest() {
 void DisplayUI::drawMenu() {
     String tmp;
     int    tmpLen;
-    int    row = (currentMenu->selected / 5) * 5;
+    int    row = (currentMenu->selected / 4) * 4; // /5 * 5
 
     // correct selected if it's off
     if (currentMenu->selected < 0) currentMenu->selected = 0;
     else if (currentMenu->selected >= currentMenu->list->size()) currentMenu->selected = currentMenu->list->size() - 1;
 
     // draw menu entries
-    for (int i = row; i < currentMenu->list->size() && i < row + 5; i++) {
+    for (int i = row; i < currentMenu->list->size() && i < row + 4; i++) { // + 5 
         tmp    = currentMenu->list->get(i).getStr();
         tmpLen = tmp.length();
 
