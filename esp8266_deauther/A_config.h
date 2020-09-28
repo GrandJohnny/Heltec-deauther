@@ -11,7 +11,7 @@
 // =========================== //
 
 #define DEFAULT_SSID "pwned"
-//#define HIGHLIGHT_LED 16
+#define HIGHLIGHT_LED 3
 
 // ===================== LED CONFIG ==================== //
 /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
@@ -26,15 +26,15 @@
     Adjust following settings for your type of LED
     you can ignore the rest of the #define's
    = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
-
+   
 // === Settings for Digital LED and RGB LED === //
 #define LED_ANODE false   // common vcc (+)
-#define LED_PIN_R 16      // NodeMCU on-board LED
-#define LED_PIN_G 255     // 255 = LED disabled
-#define LED_PIN_B 2       // ESP-12 LED
+#define LED_PIN_R 3      // NodeMCU on-board LED
+#define LED_PIN_G 2     // 255 = LED disabled
+#define LED_PIN_B 1       // ESP-12 LED
 
 // === Settings for RGB LED and Neopixel LED === //
-#define LED_MODE_BRIGHTNESS 10 // brightness of LED modes
+#define LED_MODE_BRIGHTNESS 10 // brightness of LED modes 
 
 // === Settings for Neopixel LED === //
 #define LED_NEOPIXEL_NUM 1
